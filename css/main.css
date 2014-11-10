@@ -1,0 +1,36 @@
+body {
+	background-color: #8FB79D;
+}
+
+.container {
+	margin: auto;
+	max-width: 1000px;
+	padding: 70px 5px 20px 5px;
+	background-color: #F4F7DC;
+}
+
+.container div {
+	width: 80%;
+	margin: auto;
+}
+
+h1,
+h2,
+h3 {
+	color: #79B287;
+	text-align: center;
+}
+
+h2 {
+	margin-top: 70px;
+}
+
+img {
+	border: 2px solid;
+	float: right;
+	width: 25%;
+}
+
+td {
+	padding-right: 10px;
+}
