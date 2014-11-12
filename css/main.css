@@ -2,6 +2,10 @@ body {
 	background-color: #8FB79D;
 }
 
+nav {
+	box-shadow: 0 0  2px 0;
+}
+
 .container {
 	margin: auto;
 	max-width: 1000px;
@@ -26,9 +30,11 @@ h2 {
 }
 
 img {
-	border: 2px solid;
+	border: 5px solid #555;
 	float: right;
 	width: 25%;
+	margin: 10px;
+	box-sizing: border-box;
 }
 
 td {
