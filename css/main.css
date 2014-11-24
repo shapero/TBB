@@ -21,12 +21,19 @@ nav {
 h1,
 h2,
 h3 {
-	color: #79B287;
 	text-align: center;
+	font-family: 'Quattrocento', serif;
+}
+
+h1,
+h3 {
+	color: #555;
 }
 
 h2 {
+	color: #79B287;
 	padding-top: 70px;
+	padding-bottom: 20px;
 }
 
 img {
@@ -35,6 +42,10 @@ img {
 	width: 25%;
 	margin: 10px;
 	box-sizing: border-box;
+}
+
+.btn {
+	margin-bottom: 10px;
 }
 
 td {
