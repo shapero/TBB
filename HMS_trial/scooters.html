@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Highland Motorsport | Vespa Louisville</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>	
+<header class="header">
+		<div class="header-div">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4">
+						<a href="index.html"><img src="icons/Logo.jpg" class="logo"></a>
+					</div>
+					<div class="col-sm-8">
+						<ul class="nav nav-pills" role="tablist">
+							  <li><a href="index.html">Home</a></li>
+							  <li class="dropdown active">
+							  	<a href="scooters.html">Scooters<span class="caret"></span>
+							  	</a>
+							  	<ul class="dropdown-menu" role="menu">
+							  	</ul>
+						  	  </li>
+							  <li><a href="parts.html">Parts</a></li>
+							  <li><a href="faq.html">FAQ</a></li>
+							  <li><a href="about.html">About Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">		
+					<div class="scooter-nav">
+						<div class="row">
+						<div class="col-xs-6 col-sm-12">
+						<div class="scooter-nav-brand">
+							<form>
+								<h4>Brand</h4>
+								<label><input type="checkbox" name="make" value="piaggio" class="brand-input" checked="checked">Piaggio</label><br>
+								<label><input type="checkbox" name="make" value="vespa" class="brand-input" checked="checked">Vespa</label><br>
+								<label><input type="checkbox" name="make" value="sym" class="brand-input" checked="checked">SYM</label><br>
+								<label><input type="checkbox" name="make" value="lance" class="brand-input" checked="checked">Lance</label><br>
+								<label><input type="checkbox" name="make" value="genuine" class="brand-input" checked=
+								"checked">Genuine</label><br>
+								<label><input type="checkbox" name="make" value="bintelli" class="brand-input" checked=
+								"checked">Bintelli</label><br>
+								<label><input type="checkbox" name="make" value="all-brands" class="brand-input-all" checked="checked">All Brands</label>
+							</form>
+						</div>
+						</div>
+<!-- 						<div class="col-xs-6 col-sm-12">
+							<div class="scooter-nav-engine">
+								<form>
+									<h4>Engine Size</h4>
+									<label><input type="checkbox" name="engine" value="50" class="engine-input" checked="checked">50cc</label><br>
+									<label><input type="checkbox" name="engine" value="125" class="engine-input" checked="checked">125cc</label><br>
+									<label><input type="checkbox" name="engine" value="150" class="engine-input" checked="checked">150cc</label><br>
+									<label><input type="checkbox" name="engine" value="200" class="engine-input" checked="checked">200cc and up</label><br>
+									<label><input type="checkbox" name="engine" value="all-sizes" class="engine-input-all" checked="checked">All Sizes</label>
+								</form>
+							</div>
+						</div> -->
+					</div>
+			</div>
+		</div>
+		<div class="col-sm-10">
+			<div class="scooter-browse">
+				<div class="row">
+					<ul id="scooter-browse-list">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p>This site contains links to other internet sites. Such links are not endorsements of any products or services in such sites, and no information in such site has been endorsed or approved by Highland Motorsport LLC</p>
+	</footer>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+//Populate bike cards
+		$.getJSON("js/scooter.json", function(response){
+			$.each(response, function(index, bike) {
+				$("#scooter-browse-list").append('<div class="col-md-4"><li class="bike-card" data-cc="'+bike.engine+'" data-brand="'+bike.scooterClass+'"><div class="bike-header"><h2>'+bike.scooterName+'</h2><img src="'+bike.scooterImage+'" alt="Scooter image" class="bike-picture"><img src="'+bike.scooterBrand+'" alt="Scooter Brand" class="brand-logo"></div><div class="bike-info"><h3>Specifications</h3><ul class="specs"><li class="left-specs"><ul><li class="price">'+bike.price + '</li><li class="engine">'+bike.engine+'cc</li></ul></li><li class="right-specs"><ul><li class="mpg">'+bike.mpg+'MPG</li><li class="speed">'+bike.speed+'MPH</li></ul></li></ul></div></div></li>');
+			})//end each
+		});
+
+
+//Selector Function
+	$('.brand-input').click(function(){
+		var checked = $(".brand-input:checked");
+			var checkedBrands = [];
+			checked.each(function() {
+				var brand = $(this).val();
+				checkedBrands.push(brand);
+			});
+
+
+			$('.bike-card').each(function () {
+				$(this).parent(".col-md-4").hide(250);
+				var brand = $(this).data('brand');
+				var shouldShow = $.inArray(brand, checkedBrands);
+				if (shouldShow >= 0) {
+					$(this).parent(".col-md-4").show(250);
+				}			
+			}) //end scooter card each
+			
+			if(checkedBrands.length < 6) {
+				$(".brand-input-all").prop("checked", false);
+			} else {
+				$(".brand-input-all").prop("checked", true);
+			}
+	}); // end click function
+
+//All Brands
+	$(".brand-input-all").click(function(){
+		if($(this).attr("checked") != true) {
+			$(".brand-input").each(function(){
+				$(this).prop("checked", true);
+				console.log('hey');
+			}) //end each
+			$(".col-md-4").show(250);			
+		} //end if
+	}) //end click
+
+	 </script>
+</body>
+</html>

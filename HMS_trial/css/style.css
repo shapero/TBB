@@ -1,0 +1,494 @@
+/*General Styles*/
+
+body {
+	background-color: #ccc;
+}
+
+ul {
+	padding-left: 0;
+}
+
+li {
+	list-style: none;
+}
+
+p {
+	font-size: 1.15em;
+}
+
+.btn {
+	background-color: #E71831;
+	box-shadow: 1px 1px 5px black;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+	color: white;
+}
+
+/*Header Styles*/
+a {
+	text-decoration: none;
+	color: black;
+}
+
+header {
+	background: #444;
+	display: flex;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	justify-content: center;
+}
+
+
+.header-div {
+/*	width: 80%;*/
+	max-width: 1200px;
+	text-align: center;
+}
+
+.logo {
+	height: 200px;
+	float: left;
+	/*margin-bottom: -10px;*/
+}
+
+ 
+/*Nav Styles */
+.nav {
+	font-size:1.2em;
+	margin-top:156px;
+	float: right;
+
+}
+
+.nav li {
+	background-color: #52BD4A;
+}
+
+.nav a {
+	color: #333;
+}
+
+.nav select {
+	margin: 30px auto -10px;
+	width: 170px;
+	background: #ccc;
+	padding: 5px;
+	float: left;
+
+}
+
+/*Hide - Display Select*/
+@media (min-width: 768px) {
+	.nav select{
+    	display: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.nav li {
+		display: none;
+	}
+		.nav {
+		margin-top: 0px;
+	}
+	.min > h2 {
+		text-align: center;
+	}
+}
+
+/*Footer Styles*/
+
+footer {
+	background-color: #444;
+	text-align: right;
+	font-size: .75em;
+	width: 100%;
+	clear: both;
+}
+
+footer p {
+	color: #52BD4A;
+}
+
+/*Index Styles*/
+.body {
+	clear: both;
+	width: 80%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.slideshow {
+	float: left;
+	width: 100%;
+	margin: 20px 10px auto 0;
+	height: auto;
+	overflow: hidden;
+}
+
+.slideshow ul{
+	margin: 0px;
+}
+
+.slideshow li {
+	display: none;
+}
+
+.slideshow li:first-child {
+	display: block;
+}
+
+.slideshow img {
+	width: 100%;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+	margin:0px auto 20px;
+	border: 1px black;
+}
+
+.jumbotron div {
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+}
+
+.action {
+	font-size: 1.5em;
+}
+
+.fancy{
+	font-style: italic;
+	font-size: .85em;
+}
+
+.store-info h2 {
+	text-align: center;
+}
+
+.promo {
+	height: 40%;
+}
+
+.blurb,
+.hours {
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+	margin: 10px;
+	padding: 10px;
+	font-size: 1em;
+}
+
+.blurb {
+	background-color:#FFB542;
+}
+
+.hours {
+	background-color: #52BD4A;
+}
+
+@media (max-width: 768px) {
+
+	.store-info h2 {
+		color: black;
+		padding: 10px 0 10px 0;
+		font-size: 2.75em;
+	}
+
+	.store-info p {
+		margin-left: 5px;
+		padding: none;
+		font-size: 1.5em;
+
+	}
+
+	.store-info a {
+		font-size: 1em;
+		color: #fff;
+	}
+}
+
+
+.store-info p,
+.store-info h2 {
+	margin: 10px;
+}
+
+.store-info span {
+	font-weight: bold;
+}
+
+.contact a {
+	width:100%;
+	text-align: left;
+}
+.phone:before {
+	content: url("../icons/phone.png");
+}
+
+.address:before {
+	content: url("../icons/map.png");
+}
+
+.email:before {
+	content: url("../icons/email.png");
+}
+
+.facebook:before {
+	content: url("../icons/facebook.png");
+}
+
+.phone:before,
+.address:before,
+.email:before,
+.facebook:before {
+	margin-right: 5px;
+	background-image: 
+}
+
+.featured-scooters {
+	clear: both;
+	text-align: center;
+	padding: 20px 0px;
+}
+
+/*FAQ styles*/
+
+
+.main {
+	width: 80%;
+	max-width: 1200px;
+	margin: auto;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+}
+
+.wide {
+	width: 60%;
+}
+
+.main a{
+	text-decoration: underline;
+}
+
+.main h1 {
+	color: #E71831;
+	text-align: center;
+	padding-top: 20px;
+	}
+
+.main > div {
+	margin: auto 20px 20px;
+	padding-bottom: 10px;
+}
+
+/*Scooter styles*/
+
+.scooter-nav {
+	background-color: white;
+	margin-top: 15px;
+	border-style: solid;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+	padding: 5px;
+}
+
+.scooter-nav h4 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+/*Scooter card Styles*/
+
+.bike-card {
+	height: auto;
+	text-align: center;
+	background-color: #fff;
+	margin: 15px;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+	border-style: solid;
+	padding-bottom: 5px;
+	box-shadow: 0px 3px 10px 4px rgba(0,0,0, 0.7);
+
+}
+
+.bike-picture{
+	height: 200px;
+	border: 2px;
+	margin-bottom: 20px;
+}
+
+.brand-logo{
+	width: auto;
+	height: 75px;
+}
+
+
+.bike-card ul {
+	list-style-type: none;
+	font-size: 1em;
+}
+
+.specs {
+	display: block;
+	margin: 0 auto;
+	width: 240px;
+	font-size: 1.1em;
+}
+
+.specs > li {
+	display: inline-block;
+	width: 49%;
+}
+
+.left-specs li,
+.right-specs li {	
+	background-repeat: no-repeat;
+	height: 30px;
+}
+
+
+
+.left-specs li {
+	background-position: 12px -4px;
+}
+
+.right-specs li {
+	/*background-position-x: -1px;*/
+}
+
+.price {
+	background-image: url("../icons/dollar.png");
+	background-position-x: 15px;
+}
+
+.engine {
+	background-image: url("../icons/engine.png");
+}
+
+.mpg {
+	background-image: url("../icons/fuel.png");
+}
+
+.speed {
+	background-image: url("../icons/speedo.png");
+}
+
+/****************************
+Bike Card Media Queries*/
+
+@media (max-width: 767px) {
+	.bike-card{
+		margin: 20px;
+		width: 90%;
+	}
+	.brand-logo{
+		width: 25%;
+		margin: auto;
+		height: auto;	
+	}
+	
+	.bike-card ul {
+		list-style-type: none;
+		font-size: 1em;
+		clear: both;
+	}
+
+	.bike-image{
+		margin: 0 5%;
+	}
+}
+
+
+/*Brand Page Styles*/
+.brand-page-logo{
+	margin: 25px 32%;
+	height: 200px;
+}
+
+.brand-blurb {
+	background-color: #52BD4A;
+	display: inline-block;
+	float:right;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+	width: 25%;
+	min-width: 300px;
+	margin-top:20px;
+}
+
+.brand-blurb h2,
+.brand-blurb p {
+	padding: 0 10%;
+}
+
+/*About Page Styles*/
+
+.about-us {
+	width: 40%;
+	float: left;
+}
+
+.about-us h2 {
+	margin-top: 40px;
+}
+
+.map {
+	float: right;
+	width: 40%;
+}
+
+#about-us-contact{
+	width: 300px;
+}
+
+
+/*Media Queries*/
+@media (max-width:767px) {
+  body {
+  	font-size: 1.5em;
+  }
+
+  .main{
+		width: 100%;
+   }
+
+  .main-nav ul {
+    display:none;
+  }
+  .main-nav select {
+  	display: block;
+  }
+
+  .body div {
+  	width: 100%;
+  	margin: 20px auto;
+  	height: auto;
+  }
+
+  header {
+  	margin-bottom: 20px;
+  }
+
+  footer {
+  	text-align: center;
+  	font-size: .5em;
+  }
+
+  .store-info {
+  	padding: 10%;
+  	box-sizing: border-box;
+  }
+  .min > h2 {
+	text-align: center;
+  }
+}
